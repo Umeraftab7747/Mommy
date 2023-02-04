@@ -15,6 +15,7 @@ const Carbooking = ({navigation}) => {
       <TouchableOpacity
         onPress={() => {
           navigation.navigate('DrawerNavigator');
+          alert('this is stuck here');
         }}>
         <Text style={styles.Text123}>Get Started</Text>
       </TouchableOpacity>

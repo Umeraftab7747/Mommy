@@ -126,7 +126,8 @@ const Otp = ({navigation}) => {
         <AppButton
           text={'SUBMIT'}
           onPress={() => {
-            navigation.navigate('Carbooking');
+            // navigation.navigate('Carbooking');
+            navigation.navigate('DrawerNavigator');
           }}
         />
       </Animatable.View>

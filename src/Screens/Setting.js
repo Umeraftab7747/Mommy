@@ -53,7 +53,6 @@ const Setting = () => {
         <ItemContainer icon={'person'} />
       </Animatable.View>
       <Animatable.View animation="fadeIn" delay={600}>
-        dddddd
         <ItemContainer icon={'home'} />
       </Animatable.View>
       <Animatable.View animation="fadeIn" delay={700}>
