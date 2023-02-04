@@ -30,7 +30,7 @@ const SplashScreen = ({navigation}) => {
       <View style={styles.MainLogo}>
         <Image
           style={{width: '100%', height: '100%', resizeMode: 'contain'}}
-          source={require('../Assets/Mainlogo.png')}
+          source={require('../../Assets/Mainlogo.png')}
         />
       </View>
       <View style={styles.Space} />

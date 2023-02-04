@@ -6,7 +6,10 @@ const ChatBar = ({onPress}) => {
   return (
     <TouchableOpacity onPress={onPress} style={styles.ChatBar}>
       <View style={styles.leftContainer}>
-        <Image style={styles.ImgCont} source={require('../Assets/man.jpg')} />
+        <Image
+          style={styles.ImgCont}
+          source={require('../../Assets/man.jpg')}
+        />
       </View>
       <View style={styles.RightContainer}>
         <Text>Jhon Doe</Text>

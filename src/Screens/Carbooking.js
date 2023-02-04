@@ -9,7 +9,7 @@ const Carbooking = ({navigation}) => {
     <View style={styles.MainLogo}>
       <Image
         style={{width: '100%', height: '100%', resizeMode: 'cover'}}
-        source={require('../Assets/text.png')}
+        source={require('../../Assets/text.png')}
       />
 
       <TouchableOpacity

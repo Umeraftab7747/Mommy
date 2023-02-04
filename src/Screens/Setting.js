@@ -29,7 +29,7 @@ const Setting = () => {
             delay={700}>
             <Image
               style={styles.ImgCont}
-              source={require('../Assets/man.jpg')}
+              source={require('../../Assets/man.jpg')}
             />
           </Animatable.View>
           <Animatable.View

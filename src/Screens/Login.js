@@ -19,7 +19,7 @@ const Login = ({navigation}) => {
         style={styles.MainLogo}>
         <Image
           style={{width: '100%', height: '100%', resizeMode: 'contain'}}
-          source={require('../Assets/logo2.png')}
+          source={require('../../Assets/logo2.png')}
         />
       </Animatable.View>
       <Animatable.View animation="fadeInDown" delay={600}>
@@ -62,7 +62,7 @@ const Login = ({navigation}) => {
         style={styles.MainLogo2}>
         <Image
           style={{width: '100%', height: '100%', resizeMode: 'contain'}}
-          source={require('../Assets/or.png')}
+          source={require('../../Assets/or.png')}
         />
       </Animatable.View>
       <Animatable.View animation="fadeInUp" delay={900}>
