@@ -9,6 +9,7 @@ import {
 import React from 'react';
 import {w, h} from 'react-native-responsiveness';
 import Icon from 'react-native-vector-icons/Ionicons';
+import * as Animatable from 'react-native-animatable';
 
 import ItemContainer from '../Component/ItemContainer';
 import AppButton from '../Component/AppButton';
@@ -17,33 +18,56 @@ const Setting = () => {
   return (
     <View style={styles.MainContainer}>
       {/* headr */}
-      <View style={styles.TopContainer}>
+      <Animatable.View
+        animation="fadeIn"
+        delay={300}
+        style={styles.TopContainer}>
         <View style={styles.TopNineCOntainer}>
-          <View style={styles.leftTopC}>
+          <Animatable.View
+            style={styles.leftTopC}
+            animation="fadeInUp"
+            delay={700}>
             <Image
               style={styles.ImgCont}
-              source={{
-                uri: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80',
-              }}
+              source={require('../Assets/man.jpg')}
             />
-          </View>
-          <View style={styles.RightTopC}>
+          </Animatable.View>
+          <Animatable.View
+            animation="fadeInUp"
+            delay={700}
+            style={styles.RightTopC}>
             <Text style={styles.NameText2}>Jhon Doe</Text>
             <View style={styles.mainReview}>
               <Icon name="star-sharp" size={22} color="#fff" />
               <Text style={styles.NameText}>5</Text>
             </View>
-          </View>
+          </Animatable.View>
         </View>
-      </View>
+      </Animatable.View>
       {/* headr */}
-      <ItemContainer icon={'call'} />
-      <ItemContainer icon={'person'} />
-      <ItemContainer icon={'home'} />
-      <ItemContainer icon={'notifications'} />
-      <ItemContainer icon={'cog'} />
-      <AppButton text={'CHECK PAYMENT METHOD'} />
-      <AppButton text={'BECOME DRIVER'} />
+
+      <Animatable.View animation="fadeIn" delay={400}>
+        <ItemContainer icon={'call'} />
+      </Animatable.View>
+      <Animatable.View animation="fadeIn" delay={500}>
+        <ItemContainer icon={'person'} />
+      </Animatable.View>
+      <Animatable.View animation="fadeIn" delay={600}>
+        dddddd
+        <ItemContainer icon={'home'} />
+      </Animatable.View>
+      <Animatable.View animation="fadeIn" delay={700}>
+        <ItemContainer icon={'notifications'} />
+      </Animatable.View>
+      <Animatable.View animation="fadeIn" delay={800}>
+        <ItemContainer icon={'cog'} />
+      </Animatable.View>
+      <Animatable.View animation="fadeInUp" delay={1100}>
+        <AppButton text={'CHECK PAYMENT METHOD'} />
+      </Animatable.View>
+      <Animatable.View animation="fadeInUp" delay={1500}>
+        <AppButton text={'BECOME DRIVER'} />
+      </Animatable.View>
     </View>
   );
 };

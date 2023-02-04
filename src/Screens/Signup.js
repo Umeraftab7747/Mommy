@@ -2,6 +2,7 @@ import {StyleSheet, Text, TouchableOpacity, View, Image} from 'react-native';
 import React from 'react';
 import {w, h} from 'react-native-responsiveness';
 import FastImage from 'react-native-fast-image';
+import * as Animatable from 'react-native-animatable';
 
 // components
 import AppInput from '../Component/AppInput';
@@ -12,47 +13,66 @@ const Signup = ({navigation}) => {
 
   return (
     <View style={styles.Maincontainer}>
-      <View style={styles.MainLogo}>
+      <Animatable.View
+        animation="fadeInDown"
+        delay={400}
+        style={styles.MainLogo}>
         <Image
           style={{width: '100%', height: '100%', resizeMode: 'contain'}}
           source={require('../Assets/logo2.png')}
         />
-      </View>
-      <AppInput text={'Email'} text2={'Enter your Email'} />
-      <AppInput
-        text={'Password'}
-        text2={'***************'}
-        Password
-        ShowPassword={show}
-      />
+      </Animatable.View>
+      <Animatable.View animation="fadeInDown" delay={600}>
+        <AppInput text={'Email'} text2={'Enter your Email'} />
+      </Animatable.View>
+      <Animatable.View animation="fadeInDown" delay={700}>
+        <AppInput
+          text={'Password'}
+          text2={'***************'}
+          Password
+          ShowPassword={show}
+        />
+      </Animatable.View>
+      <Animatable.View
+        style={styles.passwordField}
+        animation="fadeInDown"
+        delay={700}>
+        <TouchableOpacity
+          onPress={() => {
+            SetShow(!show);
+          }}
+          style={styles.TtBtn}>
+          <Text style={styles.Btntext}>SHOW PASSWORD</Text>
+        </TouchableOpacity>
+      </Animatable.View>
 
-      <TouchableOpacity
-        onPress={() => {
-          SetShow(!show);
-        }}
-        style={styles.TtBtn}>
-        <Text style={styles.Btntext}>SHOW PASSWORD</Text>
-      </TouchableOpacity>
+      <Animatable.View animation="fadeInUp" delay={800}>
+        <AppButton
+          text={'SIGN UP'}
+          onPress={() => {
+            navigation.navigate('Otp');
+          }}
+        />
+      </Animatable.View>
 
-      <AppButton
-        text={'SIGN UP'}
-        onPress={() => {
-          navigation.navigate('Otp');
-        }}
-      />
-      <View style={styles.MainLogo2}>
+      <Animatable.View
+        animation="fadeInUp"
+        delay={800}
+        style={styles.MainLogo2}>
         <Image
           style={{width: '100%', height: '100%', resizeMode: 'contain'}}
           source={require('../Assets/or.png')}
         />
-      </View>
-      <TouchableOpacity
-        onPress={() => {
-          navigation.navigate('Login');
-        }}
-        style={styles.MainBtn}>
-        <Text style={styles.MainBtnText}>Already A User? LOG IN</Text>
-      </TouchableOpacity>
+      </Animatable.View>
+      <Animatable.View animation="fadeInUp" delay={1000}>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('Login');
+          }}
+          style={styles.MainBtn}>
+          <Text style={styles.MainBtnText}>Already A User? LOG IN</Text>
+        </TouchableOpacity>
+      </Animatable.View>
     </View>
   );
 };
@@ -104,5 +124,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: h('10%'),
+  },
+  passwordField: {
+    width: '100%',
+    height: '6%',
   },
 });

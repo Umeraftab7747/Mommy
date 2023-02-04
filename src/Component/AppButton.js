@@ -14,7 +14,7 @@ export default AppButton;
 
 const styles = StyleSheet.create({
   MainContainer: {
-    width: '90%',
+    width: w('90%'),
     height: h('7%'),
     backgroundColor: '#FF9A00',
     justifyContent: 'center',

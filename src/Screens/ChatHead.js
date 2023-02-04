@@ -2,6 +2,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {w, h} from 'react-native-responsiveness';
 import Icon from 'react-native-vector-icons/Ionicons';
+import * as Animatable from 'react-native-animatable';
 
 import Header from '../Component/Header';
 import ChatBar from '../Component/ChatBar';
@@ -15,21 +16,28 @@ const ChatHead = ({navigation}) => {
           navigation.openDrawer();
         }}
       />
-      <ChatBar
-        onPress={() => {
-          navigation.navigate('ChatScreen');
-        }}
-      />
-      <ChatBar
-        onPress={() => {
-          navigation.navigate('ChatScreen');
-        }}
-      />
-      <ChatBar
-        onPress={() => {
-          navigation.navigate('ChatScreen');
-        }}
-      />
+
+      <Animatable.View animation="fadeIn" delay={300}>
+        <ChatBar
+          onPress={() => {
+            navigation.navigate('ChatScreen');
+          }}
+        />
+      </Animatable.View>
+      <Animatable.View animation="fadeIn" delay={500}>
+        <ChatBar
+          onPress={() => {
+            navigation.navigate('ChatScreen');
+          }}
+        />
+      </Animatable.View>
+      <Animatable.View animation="fadeIn" delay={800}>
+        <ChatBar
+          onPress={() => {
+            navigation.navigate('ChatScreen');
+          }}
+        />
+      </Animatable.View>
     </View>
   );
 };

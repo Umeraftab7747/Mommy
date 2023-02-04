@@ -23,7 +23,7 @@ export default AppInput;
 
 const styles = StyleSheet.create({
   AppInputContainer: {
-    width: '90%',
+    width: w('90%'),
     height: h('9%'),
     // backgroundColor: 'red',
     marginTop: h('2%'),

@@ -5,6 +5,7 @@ import {w, h} from 'react-native-responsiveness';
 import FastImage from 'react-native-fast-image';
 import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
 import Icon from 'react-native-vector-icons/Ionicons';
+import * as Animatable from 'react-native-animatable';
 
 const GOOGLE_MAPS_APIKEY = 'AIzaSyB5ukZgNnlKRZDvfM6LV2y6l9HikfZQCb8';
 
@@ -20,20 +21,26 @@ const MainMenu = ({navigation}) => {
           latitudeDelta: 0.015,
           longitudeDelta: 0.0121,
         }}></MapView>
-      <TouchableOpacity
-        onPress={() => {
-          navigation.openDrawer();
-        }}
-        style={styles.boxofColor}>
-        <Icon name="apps-sharp" size={30} color="#FF9A00" />
-      </TouchableOpacity>
-      <TouchableOpacity
-        onPress={() => {
-          navigation.openDrawer();
-        }}
+      <Animatable.View animation="fadeInDown" delay={300}>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.openDrawer();
+          }}
+          style={styles.boxofColor}>
+          <Icon name="apps-sharp" size={30} color="#FF9A00" />
+        </TouchableOpacity>
+      </Animatable.View>
+      <Animatable.View
+        animation="fadeInUp"
+        delay={500}
         style={styles.boxofColor2}>
-        <Icon name="car-sport-sharp" size={40} color="#fff" />
-      </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.openDrawer();
+          }}>
+          <Icon name="car-sport-sharp" size={40} color="#fff" />
+        </TouchableOpacity>
+      </Animatable.View>
     </View>
   );
 };

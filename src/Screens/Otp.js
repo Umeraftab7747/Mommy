@@ -3,6 +3,7 @@ import React, {useState, useEffect, useRef} from 'react';
 import {w, h} from 'react-native-responsiveness';
 import FastImage from 'react-native-fast-image';
 import AppButton from '../Component/AppButton';
+import * as Animatable from 'react-native-animatable';
 
 const Otp = ({navigation}) => {
   const [value, setValue] = React.useState('');
@@ -28,14 +29,31 @@ const Otp = ({navigation}) => {
 
   return (
     <View style={styles.OtpScreen}>
-      <View style={styles.TopContainer}>
-        <Text style={styles.MainVerification}>Verification</Text>
-        <Text style={styles.MainVerification2}>
-          Lorem Ipsum is simply dummy text
-        </Text>
-      </View>
+      <Animatable.View
+        animation="fadeInDown"
+        delay={500}
+        style={styles.TopContainer}>
+        <Animatable.View
+          style={{
+            width: '100%',
+            height: '100%',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+          animation="fadeInUp"
+          delay={800}>
+          <Text style={styles.MainVerification}>Verification</Text>
+          <Text style={styles.MainVerification2}>
+            Lorem Ipsum is simply dummy text
+          </Text>
+        </Animatable.View>
+      </Animatable.View>
+
       {/* inputs */}
-      <View style={styles.InputCode}>
+      <Animatable.View
+        animation="fadeInUp"
+        delay={500}
+        style={styles.InputCode}>
         <TextInput
           keyboardType="numeric"
           onFocus={() => {
@@ -100,15 +118,18 @@ const Otp = ({navigation}) => {
           }}
           ref={ref4}
         />
-      </View>
+      </Animatable.View>
 
       <View style={styles.MainView} />
-      <AppButton
-        text={'SUBMIT'}
-        onPress={() => {
-          navigation.navigate('Carbooking');
-        }}
-      />
+
+      <Animatable.View animation="fadeInUp" delay={800}>
+        <AppButton
+          text={'SUBMIT'}
+          onPress={() => {
+            navigation.navigate('Carbooking');
+          }}
+        />
+      </Animatable.View>
 
       {/* inputs */}
     </View>

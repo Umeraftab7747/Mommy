@@ -1,4 +1,5 @@
 #import "AppDelegate.h"
+#import <GoogleMaps/GoogleMaps.h>
 
 #import <React/RCTBundleURLProvider.h>
 
@@ -6,6 +7,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  [GMSServices provideAPIKey:@"AIzaSyB5ukZgNnlKRZDvfM6LV2y6l9HikfZQCb8"];
   self.moduleName = @"mommy";
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }

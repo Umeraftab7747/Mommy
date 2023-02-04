@@ -2,6 +2,7 @@ import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import React from 'react';
 import {w, h} from 'react-native-responsiveness';
 import FastImage from 'react-native-fast-image';
+import * as Animatable from 'react-native-animatable';
 
 const Carbooking = ({navigation}) => {
   return (
