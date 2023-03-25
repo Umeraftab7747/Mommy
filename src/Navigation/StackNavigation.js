@@ -12,6 +12,7 @@ import Otp from '../Screens/Otp';
 import Carbooking from '../Screens/Carbooking';
 import ChatScreen from '../Screens/ChatScreen';
 import DriverSignup from '../Screens/DriverSignup';
+import Location from '../Screens/Location';
 
 import DrawerNavigator from './DrawerNavigator';
 
@@ -24,6 +25,7 @@ const StackNavigation = () => {
         <Stack.Screen name="SplashScreen" component={SplashScreen} />
         <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="DriverSignup" component={DriverSignup} />
+        <Stack.Screen name="Location" component={Location} />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Otp" component={Otp} />
         <Stack.Screen name="Carbooking" component={Carbooking} />

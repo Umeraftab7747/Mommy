@@ -36,7 +36,7 @@ const MainMenu = ({navigation}) => {
         style={styles.boxofColor2}>
         <TouchableOpacity
           onPress={() => {
-            navigation.openDrawer();
+            navigation.navigate('Location');
           }}>
           <Icon name="car-sport-sharp" size={40} color="#fff" />
         </TouchableOpacity>
