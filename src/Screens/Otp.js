@@ -127,7 +127,10 @@ const Otp = ({navigation}) => {
           text={'SUBMIT'}
           onPress={() => {
             // navigation.navigate('Carbooking');
-            navigation.navigate('DrawerNavigator');
+            navigation.navigate('DrawerNavigator', {
+              screen: 'MainMenu',
+              params: {lat: 0, lng: 0, Destination: 0},
+            });
           }}
         />
       </Animatable.View>
