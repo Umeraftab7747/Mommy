@@ -14,7 +14,7 @@ import * as Animatable from 'react-native-animatable';
 import ItemContainer from '../Component/ItemContainer';
 import AppButton from '../Component/AppButton';
 
-const Setting = () => {
+const Setting = ({navigation}) => {
   return (
     <View style={styles.MainContainer}>
       {/* headr */}
@@ -45,7 +45,7 @@ const Setting = () => {
         </View>
       </Animatable.View>
       {/* headr */}
-
+      <View style={{height: 10}} />
       <Animatable.View animation="fadeIn" delay={400}>
         <ItemContainer icon={'call'} />
       </Animatable.View>
@@ -65,7 +65,12 @@ const Setting = () => {
         <AppButton text={'CHECK PAYMENT METHOD'} />
       </Animatable.View>
       <Animatable.View animation="fadeInUp" delay={1500}>
-        <AppButton text={'BECOME DRIVER'} />
+        <AppButton
+          onPress={() => {
+            navigation.navigate('DriverSignup');
+          }}
+          text={'BECOME DRIVER'}
+        />
       </Animatable.View>
     </View>
   );
