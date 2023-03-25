@@ -21,7 +21,7 @@ const SplashScreen = ({navigation}) => {
       duration: 5000,
       useNativeDriver: false, // Add This line
     }).start(() => {
-      navigation.navigate('Signup');
+      navigation.navigate('Login');
     });
   };
 

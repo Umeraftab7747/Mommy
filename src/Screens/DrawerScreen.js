@@ -13,7 +13,7 @@ const DrawerScreen = ({navigation}) => {
       </View>
       {/* Button */}
       <TouchableOpacity
-        onPress={() => this.removeData()}
+        onPress={() => navigation.navigate('DrawerNavigator')}
         style={styles.ItemView}>
         <View style={styles.LeftContainer}>
           <Icon name="map-sharp" size={30} color="#0007" />

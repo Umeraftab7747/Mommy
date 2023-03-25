@@ -68,7 +68,7 @@ const Login = ({navigation}) => {
       <Animatable.View animation="fadeInUp" delay={900}>
         <TouchableOpacity
           onPress={() => {
-            navigation.goBack();
+            navigation.navigate('Signup');
           }}
           style={styles.MainBtn}>
           <Text style={styles.MainBtnText}>Need an account? SIGN UP</Text>
